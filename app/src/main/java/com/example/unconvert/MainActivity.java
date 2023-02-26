@@ -20,15 +20,13 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         textView = findViewById(R.id.textView2);
         editText = findViewById(R.id.editTextTextPersonName);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Toast.makeText(MainActivity.this, "Hi click listener worked", Toast.LENGTH_SHORT).show();
-              String s =  editText.getText().toString();
-               int kg = Integer.parseInt(s);
-               double pound = 2.205 * kg;
-                textView.setText(kg+" kg is equall to: "+pound);
-            }
-        });
+
+    }
+
+    public void calculate(View view) {
+        String s =  editText.getText().toString();
+        int kg = Integer.parseInt(s);
+        double pound = 2.205 * kg;
+        textView.setText(kg+" kg is equall to: "+pound+"pounds");
     }
 }
